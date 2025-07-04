@@ -89,6 +89,11 @@ public class Main {
 					break;
 				}
 				
+				int confirmar = JOptionPane.showConfirmDialog(null, "Deseja confirmar o seu pedido no valor de R$" + valorP + "?");
+				if(confirmar != 0) {
+					break;
+				}
+				
 				if (cliente.saldo >= valorP) {	//Verifica se o saldo é suficiente
 					cliente.saldo -= valorP;
 					JOptionPane.showMessageDialog(null, "Pedido no valor de R$" + valorP + "realizado com sucesso!\nSeu lanche já está sendo preparado.", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
