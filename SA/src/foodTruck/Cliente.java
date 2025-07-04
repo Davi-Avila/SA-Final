@@ -6,13 +6,6 @@ public class Cliente {
 	String senha;
 	double saldo;
 	
-	public void Cliente(String nome, String cep, String senha, double saldo) {
-		this.nome = nome;
-		this.cep = cep;
-		this.senha = senha;
-		this.saldo = saldo;
-	}
-	
 	public void Cadastrar() {
 		nome = JOptionPane.showInputDialog("Digite seu nome");
 		cep = JOptionPane.showInputDialog("Digite seu cep");
