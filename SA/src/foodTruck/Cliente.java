@@ -32,8 +32,9 @@ public class Cliente {
 	
 	public void fazerDep() {
 		double valor = 0;
-		Double.parseDouble(JOptionPane.showInputDialog("Digite o valor que deseja depositar:"));
+		valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor que deseja depositar:"));
 		saldo += valor;
+		JOptionPane.showMessageDialog(null, "O valor de R$" + valor + " foi depositado com sucesso!", "", JOptionPane.INFORMATION_MESSAGE);
 		
 	}
 
