@@ -58,7 +58,7 @@ public class Main {
 					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Você digitou um restaurante inválido", "Erro", JOptionPane.ERROR_MESSAGE);
-					break;
+					continue;
 				}
 				
 				switch (pedido) {
@@ -86,12 +86,12 @@ public class Main {
 					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Você digitou um pedido inválido", "Erro", JOptionPane.ERROR_MESSAGE);
-					break;
+					continue;
 				}
 				
 				int confirmar = JOptionPane.showConfirmDialog(null, "Deseja confirmar o seu pedido no valor de R$" + valorP + "?");
 				if(confirmar != 0) {
-					break;
+					continue;
 				}
 				
 				if (cliente.saldo >= valorP) {	//Verifica se o saldo é suficiente
