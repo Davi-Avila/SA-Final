@@ -34,6 +34,8 @@ public class Main {
 					}else { //Sai caso selecione não ou cancelar
 						break;
 					}
+				}else {
+					JOptionPane.showMessageDialog(null, "Opção inexistente, tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
 				}
 				break;
 				
@@ -91,19 +93,23 @@ public class Main {
 				
 				int confirmar = JOptionPane.showConfirmDialog(null, "Deseja confirmar o seu pedido no valor de R$" + valorP + "?");
 				if(confirmar != 0) {
-					continue;
+					break;
 				}
 				
 				if (cliente.saldo >= valorP) {	//Verifica se o saldo é suficiente
 					cliente.saldo -= valorP;
-					JOptionPane.showMessageDialog(null, "Pedido no valor de R$" + valorP + "realizado com sucesso!\nSeu lanche já está sendo preparado.", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Pedido no valor de R$" + valorP + " realizado com sucesso!\nSeu lanche já está sendo preparado.", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
 					JOptionPane.showMessageDialog(null, "Seu pedido já foi enviado para o CEP " + cliente.cep, "À caminho", JOptionPane.INFORMATION_MESSAGE);
 				}else {
 					JOptionPane.showMessageDialog(null, "Saldo insuficiente. \nNão foi possível realizar o pedido.", "Erro", JOptionPane.ERROR_MESSAGE);
 				}
 				break;
 				
-				
+			case 3:
+				JOptionPane.showMessageDialog(null, "Sistema encerrado", "Encerrado", JOptionPane.INFORMATION_MESSAGE);
+				break;
+			default:
+				JOptionPane.showMessageDialog(null, "Opção inexistente, tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 		System.exit(0);
